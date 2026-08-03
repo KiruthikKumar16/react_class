@@ -1,0 +1,20 @@
+<div id="app">
+  <h2 id="username"></h2>
+  <p id="cart-count">Cart: 0</p>
+  <button id="add-btn">Add to cart</button>
+</div>
+
+<script>
+  let cartCount = 0;
+  let username = "Kiruthik";
+
+  document.getElementById('username').innerText = username;
+  document.getElementById('cart-count').innerText = `Cart: ${cartCount}`;
+
+  document.getElementById('add-btn').addEventListener('click', () => {
+    cartCount++;
+    document.getElementById('cart-count').innerText = `Cart: ${cartCount}`;
+    // if cart count also shows in a header badge and a sidebar,
+    // you now update THREE places manually, every single time state changes
+  });
+</script>

@@ -1,0 +1,45 @@
+.page {
+  font-family: system-ui, sans-serif;
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  border: 1px solid #e01f1f;
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(16, 160, 86, 0.08);
+}
+
+.roster-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.team-card {
+  border: 1px solid #3913c5;
+  border-radius: 12px;
+  padding: 16px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(175, 13, 154, 0.08);
+}
+
+.team-card .role {
+  color: #ef0fdc;
+  font-size: 14px;
+}
+
+.team-card .bio {
+  font-size: 12px;
+  color: #871a1a;
+  margin-top: 8px;
+}
+
+h2 {
+  margin-top: 24px;
+}
