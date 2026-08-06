@@ -25,8 +25,7 @@ function App() {
 
       {/* Part 2: reusable ProfileInfo, 3 different people from same component 
       <div className="roster-row">
-        <ProfileInfo name="Kiruthik Kumar" role="Trainer" />
-        <ProfileInfo name="Anish" role="Developer" />
+        <ProfileInfo name="Kiruthik Kumar" mjkiop-o99oo----------------------------------Anish" role="Developer" />
         <ProfileInfo name="Priya" role="Designer" />
       </div>
       */}

@@ -23,7 +23,7 @@ public class HelloController {
 
     @GetMapping("/{id}")
     public String getById(@PathVariable Long id) {
-        return "You asked for ID: " + id;
+        return " You asked for ID: " + id;
     }
 
     @GetMapping("/search")
