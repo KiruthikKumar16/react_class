@@ -1,11 +1,21 @@
 package com.example.demo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String role;
 
-    public Person() {} // required empty constructor for JSON deserialization
+    public Person() {} // required empty constructor for JPA + JSON deserialization
 
     public Person(String name, String role) {
         this.name = name;
