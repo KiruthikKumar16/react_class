@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class PersonController {
     }
 
     @PostMapping
-    public Person create(@RequestBody Person person) {
+    public Person create(@Valid @RequestBody Person person) {
         return service.create(person);
     }
 
