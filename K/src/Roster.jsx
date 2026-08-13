@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import TeamMember from './TeamMember';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:9878';
+
 function Roster() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState('');
@@ -11,7 +13,7 @@ function Roster() {
   function fetchUsers() {
     setLoading(true);
     setError(null);
-    axios.get('https://jsonplaceholder.typicode.com/users')
+    axios.get(`${API_URL}/api/people`)
       .then((response) => {
         setUsers(response.data);
       })
@@ -25,7 +27,7 @@ function Roster() {
 
   useEffect(() => {
     fetchUsers();
-  }, []); // run once on mount
+  }, []);
 
   if (loading) return <p>Loading users...</p>;
 
@@ -59,9 +61,8 @@ function Roster() {
           <TeamMember
             key={user.id}
             name={user.name}
-            role={user.company.name}
+            role={user.role}
             photoUrl={`https://i.pravatar.cc/150?u=${user.id}`}
-            bio={user.email}
           />
         ))}
       </div>
